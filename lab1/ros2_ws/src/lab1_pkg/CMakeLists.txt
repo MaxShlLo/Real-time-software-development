@@ -19,7 +19,7 @@ rclcpp_components_register_nodes(component_node "lab1_namespace::ComponentNode")
 target_include_directories(component_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
-target_compile_features(component_node PUBLIC c_std_17 cxx_std_20)  # Require C17 and C++20
+target_compile_features(component_node PUBLIC c_std_17 cxx_std_20)
 target_link_libraries(
     component_node
     rclcpp::rclcpp
