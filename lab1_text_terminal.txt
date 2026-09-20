@@ -1,0 +1,204 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker build -t ros2_lab1_image .
+[+] Building 59.1s (11/11) FINISHED                                                                docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 657B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ros:lyrical                                                     2.9s
+ => [auth] library/ros:pull token for registry-1.docker.io                                                         0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/5] FROM docker.io/library/ros:lyrical@sha256:dbb2a254523ee3c40ec9fc07956bc1042253c7beb3b6dad4a4585d85c99e  46.2s
+ => => resolve docker.io/library/ros:lyrical@sha256:dbb2a254523ee3c40ec9fc07956bc1042253c7beb3b6dad4a4585d85c99e9  0.0s
+ => => sha256:90adab432563faaa786940a68c9ddcbf963aef904b6ced77356a93ecbceab76f 25.72MB / 25.72MB                   5.2s
+ => => sha256:39661be686a916677ecc0ee87fd7e641e1fc8caddbf4469b7d92893281701fbf 401.16kB / 401.16kB                 0.8s
+ => => sha256:835e900bb5c73859cdf26c71e8e0e89816f49505a7b8578fc7d24804c05b07fd 130.82kB / 130.82kB                 0.8s
+ => => sha256:b572dbefb81bb5446b6f029252199f2fea36a08077acac526a1ec873256f204e 127.34MB / 127.34MB                25.7s
+ => => sha256:694ead40e1fddf2d24fd498727f6ddc714628beb600d79be749da72dab0b6ce7 194B / 194B                         0.3s
+ => => sha256:2eb8f4f667de9c5bbae560cd7b5b218c817f7c9225ad628dc2684e6770d93631 143.41MB / 143.41MB                30.3s
+ => => sha256:20f6484ff65301b9b0c380751ec140b24523ecf210380eccbeb1d51ae67ab0fa 91.70kB / 91.70kB                   0.4s
+ => => sha256:92b6ffc2cd101411c685959009ad8ef11efd7ea616f25bd74de6f22a331330f3 9.78MB / 9.78MB                     6.0s
+ => => sha256:8ce8ee0b8a82476b3bd26c504678b9995756f1739bcb449ddc444484c15d4082 741.49kB / 741.49kB                 0.5s
+ => => sha256:6a7c4f6d8c3863707c14af40aad062db2bb477271491c7d3e99e03394dd261e3 394B / 394B                         0.2s
+ => => sha256:08f5f5b2a2b0d2a960804adef3bd1783c5f2c20f42db5e290dc05d9529d11ae2 41.60MB / 41.60MB                  14.1s
+ => => extracting sha256:08f5f5b2a2b0d2a960804adef3bd1783c5f2c20f42db5e290dc05d9529d11ae2                          2.4s
+ => => extracting sha256:6a7c4f6d8c3863707c14af40aad062db2bb477271491c7d3e99e03394dd261e3                          0.0s
+ => => extracting sha256:8ce8ee0b8a82476b3bd26c504678b9995756f1739bcb449ddc444484c15d4082                          0.2s
+ => => extracting sha256:92b6ffc2cd101411c685959009ad8ef11efd7ea616f25bd74de6f22a331330f3                          0.4s
+ => => extracting sha256:20f6484ff65301b9b0c380751ec140b24523ecf210380eccbeb1d51ae67ab0fa                          0.0s
+ => => extracting sha256:2eb8f4f667de9c5bbae560cd7b5b218c817f7c9225ad628dc2684e6770d93631                          9.6s
+ => => extracting sha256:694ead40e1fddf2d24fd498727f6ddc714628beb600d79be749da72dab0b6ce7                          0.0s
+ => => extracting sha256:b572dbefb81bb5446b6f029252199f2fea36a08077acac526a1ec873256f204e                          3.5s
+ => => extracting sha256:39661be686a916677ecc0ee87fd7e641e1fc8caddbf4469b7d92893281701fbf                          0.0s
+ => => extracting sha256:835e900bb5c73859cdf26c71e8e0e89816f49505a7b8578fc7d24804c05b07fd                          0.0s
+ => => extracting sha256:90adab432563faaa786940a68c9ddcbf963aef904b6ced77356a93ecbceab76f                          1.6s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 206B                                                                                  0.0s
+ => [2/5] RUN apt-get update && apt-get install -y     python3-colcon-common-extensions     build-essential     &  9.0s
+ => [3/5] WORKDIR /ros2_ws                                                                                         0.0s
+ => [4/5] COPY entrypoint.sh /entrypoint.sh                                                                        0.0s
+ => [5/5] RUN chmod +x /entrypoint.sh                                                                              0.2s
+ => exporting to image                                                                                             0.4s
+ => => exporting layers                                                                                            0.2s
+ => => exporting manifest sha256:eaaed6c0972f292d5f53436679e74a2819a2faaf23282f267f508c754b10c748                  0.0s
+ => => exporting config sha256:f29242372e9d3cbbb9b59756bfb05a21cb27e578056c31020128bfa844d4f883                    0.0s
+ => => exporting attestation manifest sha256:0422700dde8d1ee71c82e77be2368be1d850aaaa874c9cd3e9556a58132bdf1b      0.0s
+ => => exporting manifest list sha256:7d5fc126aa67ed322b74beb91b51ac7930d67c5c8653c9419c7171563997d388             0.0s
+ => => naming to docker.io/library/ros2_lab1_image:latest                                                          0.0s
+ => => unpacking to docker.io/library/ros2_lab1_image:latest                                                       0.1s
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker run -it --rm -v "${PWD}\ros2_ws:/ros2_ws" ros2_lab1_image
+exec /entrypoint.sh: no such file or directory
+
+What's next:
+    Debug this container error with Gordon → docker ai "help me fix this container error"
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker run -it --rm -v "${C:\Study\Розробки ПЗ СРЧ\lab1}\ros2_ws:/ros2_ws" ros2_lab1_image
+Access to the path 'C:\Study\Розробки ПЗ СРЧ\lab1' is denied.
+At line:1 char:1
++ docker run -it --rm -v "${C:\Study\Розробки ПЗ СРЧ\lab1}\ros2_ws:/ros ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Study\Розробки ПЗ СРЧ\lab1:String) [], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentReaderUnauthorizedAccessError
+
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker run -it --rm -v "$C:\Study\Розробки ПЗ СРЧ\lab1\ros2_ws:/ros2_ws" ros2_lab1_image
+At line:1 char:25
++ docker run -it --rm -v "$C:\Study\Розробки ПЗ СРЧ\lab1\ros2_ws:/ros2_ ...
++                         ~~~
+Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidVariableReferenceWithDrive
+
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker run -it --rm -v "C:\Study\Розробки ПЗ СРЧ\lab1\ros2_ws:/ros2_ws" ros2_lab1_image
+exec /entrypoint.sh: no such file or directory
+
+What's next:
+    Debug this container error with Gordon → docker ai "help me fix this container error"
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker build -t ros2_lab1_image .
+[+] Building 2.0s (12/12) FINISHED                                                                                                                                                      docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                                                                                    0.0s
+ => => transferring dockerfile: 694B                                                                                                                                                                    0.0s
+ => [internal] load metadata for docker.io/library/ros:lyrical                                                                                                                                          1.0s
+ => [auth] library/ros:pull token for registry-1.docker.io                                                                                                                                              0.0s
+ => [internal] load .dockerignore                                                                                                                                                                       0.0s
+ => => transferring context: 2B                                                                                                                                                                         0.0s
+ => [1/6] FROM docker.io/library/ros:lyrical@sha256:dbb2a254523ee3c40ec9fc07956bc1042253c7beb3b6dad4a4585d85c99e9716                                                                                    0.0s
+ => => resolve docker.io/library/ros:lyrical@sha256:dbb2a254523ee3c40ec9fc07956bc1042253c7beb3b6dad4a4585d85c99e9716                                                                                    0.0s
+ => [internal] load build context                                                                                                                                                                       0.0s
+ => => transferring context: 35B                                                                                                                                                                        0.0s
+ => CACHED [2/6] RUN apt-get update && apt-get install -y     python3-colcon-common-extensions     build-essential     && rm -rf /var/lib/apt/lists/*                                                   0.0s
+ => CACHED [3/6] WORKDIR /ros2_ws                                                                                                                                                                       0.0s
+ => CACHED [4/6] COPY entrypoint.sh /entrypoint.sh                                                                                                                                                      0.0s
+ => [5/6] RUN sed -i 's/\r$//' /entrypoint.sh                                                                                                                                                           0.3s
+ => [6/6] RUN chmod +x /entrypoint.sh                                                                                                                                                                   0.3s
+ => exporting to image                                                                                                                                                                                  0.2s
+ => => exporting layers                                                                                                                                                                                 0.1s
+ => => exporting manifest sha256:c082189fb5c2c14d68b48c6fefde09813744ffe5ed2d22af6d2c6863867bee7b                                                                                                       0.0s
+ => => exporting config sha256:3a34760f4f00d4dd4bad177457bf3dd13cbfa256c09851fbb0a613d2884a8a80                                                                                                         0.0s
+ => => exporting attestation manifest sha256:f0feca9c1cf385acc51d6468de3c7b88c72ac0c43accceebe806f0e23a2f38d5                                                                                           0.0s
+ => => exporting manifest list sha256:4ee4f7857a5fe694fc93fd7d174fb5390d85d2ddf057f25fcffb54060fd47360                                                                                                  0.0s
+ => => naming to docker.io/library/ros2_lab1_image:latest                                                                                                                                               0.0s
+ => => unpacking to docker.io/library/ros2_lab1_image:latest                                                                                                                                            0.0s
+PS C:\Study\Розробки ПЗ СРЧ\lab1> docker run -it --rm -v "C:\Study\Розробки ПЗ СРЧ\lab1\ros2_ws:/ros2_ws" ros2_lab1_image
+root@a23ce4b983ba:/ros2_ws# mkdir src
+root@a23ce4b983ba:/ros2_ws# cd src
+root@a23ce4b983ba:/ros2_ws/src# pwd
+/ros2_ws/src
+root@a23ce4b983ba:/ros2_ws/src# ros2 pkg create --build-type ament_cmake --dependencies rclcpp rclcpp_components --node-name component_node lab1_pkg
+going to create a new package
+package name: lab1_pkg
+destination directory: /ros2_ws/src
+package format: 3
+version: 0.0.0
+description: TODO: Package description
+maintainer: ['root <root@todo.todo>']
+licenses: ['TODO: License declaration']
+build type: ament_cmake
+dependencies: ['rclcpp', 'rclcpp_components']
+node_name: component_node
+creating folder ./lab1_pkg
+creating ./lab1_pkg/package.xml
+creating source and include folder
+creating folder ./lab1_pkg/src
+creating folder ./lab1_pkg/include/lab1_pkg
+creating ./lab1_pkg/CMakeLists.txt
+creating ./lab1_pkg/src/component_node.cpp
+
+[WARNING]: Unknown license 'TODO: License declaration'.  This has been set in the package.xml, but no LICENSE file has been created.
+It is recommended to use one of the ament license identifiers:
+Apache-2.0
+BSL-1.0
+BSD-2-Clause
+BSD-3-Clause
+GPL-3.0-only
+LGPL-3.0-only
+MIT
+MIT-0
+root@a23ce4b983ba:/ros2_ws/src# cd /ros2_ws
+root@a23ce4b983ba:/ros2_ws# colcon build --symlink-install
+Starting >>> lab1_pkg
+Finished <<< lab1_pkg [24.5s]
+
+Summary: 1 package finished [24.9s]
+root@a23ce4b983ba:/ros2_ws# colcon build --symlink-install
+Starting >>> lab1_pkg
+--- stderr: lab1_pkg
+CMake Error at CMakeLists.txt:14 (ament_target_dependencies):
+  Unknown CMake command "ament_target_dependencies".
+
+
+gmake: *** [Makefile:267: cmake_check_build_system] Error 1
+---
+Failed   <<< lab1_pkg [4.11s, exited with code 2]
+
+Summary: 0 packages finished [4.45s]
+  1 package failed: lab1_pkg
+  1 package had stderr output: lab1_pkg
+root@a23ce4b983ba:/ros2_ws# colcon build --symlink-install
+Starting >>> lab1_pkg
+Finished <<< lab1_pkg [22.2s]
+
+Summary: 1 package finished [22.6s]
+root@a23ce4b983ba:/ros2_ws# colcon build --symlink-install
+Starting >>> lab1_pkg
+--- stderr: lab1_pkg
+/ros2_ws/src/lab1_pkg/src/lifecycle_nodes.cpp: In function ‘int main(int, char**)’:
+/ros2_ws/src/lab1_pkg/src/lifecycle_nodes.cpp:58:59: error: ‘TRANSITION_CONFIGURE’ is not a member of ‘rclcpp_lifecycle::Transition’
+   58 |   node1->trigger_transition(rclcpp_lifecycle::Transition::TRANSITION_CONFIGURE);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~
+/ros2_ws/src/lab1_pkg/src/lifecycle_nodes.cpp:59:59: error: ‘TRANSITION_CONFIGURE’ is not a member of ‘rclcpp_lifecycle::Transition’
+   59 |   node2->trigger_transition(rclcpp_lifecycle::Transition::TRANSITION_CONFIGURE);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~
+/ros2_ws/src/lab1_pkg/src/lifecycle_nodes.cpp:62:59: error: ‘TRANSITION_ACTIVATE’ is not a member of ‘rclcpp_lifecycle::Transition’
+   62 |   node1->trigger_transition(rclcpp_lifecycle::Transition::TRANSITION_ACTIVATE);
+      |                                                           ^~~~~~~~~~~~~~~~~~~
+/ros2_ws/src/lab1_pkg/src/lifecycle_nodes.cpp:63:59: error: ‘TRANSITION_ACTIVATE’ is not a member of ‘rclcpp_lifecycle::Transition’
+   63 |   node2->trigger_transition(rclcpp_lifecycle::Transition::TRANSITION_ACTIVATE);
+      |                                                           ^~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/lifecycle_nodes.dir/build.make:79: CMakeFiles/lifecycle_nodes.dir/src/lifecycle_nodes.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:188: CMakeFiles/lifecycle_nodes.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< lab1_pkg [16.6s, exited with code 2]
+
+Summary: 0 packages finished [17.0s]
+  1 package failed: lab1_pkg
+  1 package had stderr output: lab1_pkg
+root@a23ce4b983ba:/ros2_ws# colcon build --symlink-install
+Starting >>> lab1_pkg
+Finished <<< lab1_pkg [10.4s]
+
+Summary: 1 package finished [10.9s]
+root@a23ce4b983ba:/ros2_ws# source install/setup.bash
+root@a23ce4b983ba:/ros2_ws# ros2 run lab1_pkg lifecycle_nodes
+[INFO] [1789288289.710844080] [lc_node_1]: Вузол 'lc_node_1' створено (стан: Unconfigured)
+[INFO] [1789288289.719170858] [lc_node_2]: Вузол 'lc_node_2' створено (стан: Unconfigured)
+[INFO] [1789288289.719305797] [lc_node_1]: on_configure() викликано. Перехід до Inactive.
+[INFO] [1789288289.719353869] [lc_node_2]: on_configure() викликано. Перехід до Inactive.
+[INFO] [1789288289.719397443] [lc_node_1]: on_activate() викликано. Перехід до Active.
+[INFO] [1789288289.719437950] [lc_node_2]: on_activate() викликано. Перехід до Active.
+^C[ros2run]: Received signal:  Interrupt
+[INFO] [1789288377.164763066] [rclcpp]: signal_handler(signum=2)
+[INFO] [1789288377.166012562] [rclcpp]: signal_handler(signum=2)
+[WARN] [1789288377.166313427] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(3) in destructor
+[WARN] [1789288377.168750887] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(3) in destructor
+root@a23ce4b983ba:/ros2_ws#
