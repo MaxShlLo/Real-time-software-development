@@ -1,0 +1,5 @@
+# Скидання лічильника повідомлень.
+---
+bool success
+uint64 previous_count
+string message

@@ -1,0 +1,10 @@
+# Квадрати чисел із демонстраційною затримкою.
+float64[] data
+uint32 delay_ms
+---
+float64[] processed_data
+uint32 processed_count
+---
+uint32 processed_count
+uint32 total_count
+float32 progress

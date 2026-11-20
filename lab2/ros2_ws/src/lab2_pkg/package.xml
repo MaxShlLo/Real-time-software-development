@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>lab2_pkg</name>
+  <version>0.1.0</version>
+  <description>Laboratory 2: filtering, QoS, services, actions and PCL type adaptation.</description>
+  <maintainer email="root@todo.todo">Maksym Shylo</maintainer>
+  <license>TODO: License declaration</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>std_msgs</depend>
+  <depend>rcl</depend>
+  <depend>rclcpp_action</depend>
+  <depend>lab2_interfaces</depend>
+  <depend>sensor_msgs</depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>libpcl-all-dev</build_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <test_depend>rclpy</test_depend>
+  <test_depend>rcl_interfaces</test_depend>
+  <test_depend>ament_index_python</test_depend>
+  <test_depend>action_msgs</test_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
